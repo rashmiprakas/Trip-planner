@@ -9,10 +9,11 @@ const iconURLs = {
 
 const buildMarker = function(type, coords) {
     // Your Code Here
-    const markerDomEl = document.createElement("div");// should create it 
-    markerDomEl.style.width = "32px";
-    markerDomEl.style.height = "39px";
-    markerDomEl.style.backgroundImage = iconURLs[type];
+    let markerDomEl = document.createElement("div");// should create it
+    markerDomEl.style.width = '32px';
+    markerDomEl.style.height = '39px';
+    markerDomEl.style.backgroundImage = `url(${iconURLs[type]})`;
+    // markerDomEl.style.backgroundColor = 'red';
    return new mapboxgl.Marker(markerDomEl).setLngLat(coords);
 };
 
